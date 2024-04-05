@@ -1,0 +1,29 @@
+
+.offerRow {
+    text-align: center;
+}
+
+.offerRow h2 {
+    padding: 2rem 0 1rem;
+}
+.offerCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.offerText {
+    text-align: center;
+    max-width: 90ch;
+    color: white;
+    padding: 2em 0;
+}
+
+.button {
+    padding-bottom: 2em;
+}
+
+.button>a:hover {
+    background-color: white;
+    color: #E59DA6;
+}

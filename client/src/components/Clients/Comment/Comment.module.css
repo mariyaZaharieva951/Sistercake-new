@@ -1,0 +1,30 @@
+
+.cardComment {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    
+}
+
+.btnLike i:hover,.btnLike a:hover, .btnLike:hover, .btnComment a:hover {
+    background-color: white;
+    color: #E59DA6;
+}
+
+.btnLike i {
+    color: white;
+    text-align: center;
+    padding: 0;
+}
+
+.imgComment {
+    display: block;
+    width: 100%;
+    height: 18rem;
+    object-fit:cover;
+}
+
+.btnComment {
+    display: flex;
+    justify-content: center;
+}

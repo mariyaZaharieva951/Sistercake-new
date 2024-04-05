@@ -1,0 +1,25 @@
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnItem {
+    text-decoration: none;
+    border: 1px solid #E59DA6;
+    background-color: #E59DA6;
+    color: white;
+    max-width: 50%;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+}
+
+.btnItem a {
+    color: white;
+}
+
+.btnItem a:hover,.btnItem:hover {
+    text-decoration: none;
+    color: #E59DA6;
+    background-color: white;
+}

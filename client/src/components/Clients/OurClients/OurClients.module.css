@@ -1,0 +1,22 @@
+
+.btnCreate {
+    text-align: center;
+    padding: 2rem;
+}
+
+.btnCreate a:hover {
+    background-color: white;
+    color: #E59DA6;
+}
+
+.noComments {
+    text-align: center;
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+

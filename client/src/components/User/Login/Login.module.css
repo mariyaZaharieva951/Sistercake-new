@@ -1,0 +1,152 @@
+.container {
+    background-image: linear-gradient(rgba(43, 40, 37, 0.514), rgba(43, 40, 37, .514)),url('img/banner2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.card{
+    /* margin: 2rem; */
+    padding: 4rem;
+    border:none;
+    display: flex;
+    justify-content: center;   
+}
+
+
+
+.box {
+    width: 500px;
+    padding: 4rem;
+    background: #E59DA6;
+    text-align: center;
+    align-items: center;
+    border-radius: 6px;
+    
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid;
+    padding: 10px 10px;
+    width: 250px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s
+}
+
+.box h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+    width: 300px;
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer
+}
+
+.box input[type="submit"]:hover {
+    background: white;
+    color: #E59DA6;
+}
+
+.forgot {
+    text-decoration: underline;
+    color: #656565;
+}
+
+.forgot:hover {
+    color: white;
+}
+
+.error {
+    color: red;
+    font-size: 0.8rem;
+    margin: 0 0 20px 0;
+}
+
+.registerNow {
+    color: white;
+    text-decoration: underline;
+}
+
+.registerNow:hover {
+    color:#E59DA6;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+.social_network {
+    list-style: none;
+    display: inline;
+    margin-left: 0 !important;
+    padding: 0
+}
+
+.social_network li {
+    display: inline;
+    margin: 0 5px
+}
+
+
+.social_network a.icoFacebook:hover i,
+.social_network a.icoTwitter:hover i,
+.social_network a.icoGoogle:hover i {
+    color: #fff
+}
+
+a.socialIcon:hover,
+.socialHoverClass {
+    color: #E59DA6
+}
+
+.social_circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    border-radius: 50%;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 20px
+}
+
+.social_circle li i {
+    margin: 0;
+    line-height: 50px;
+    text-align: center
+}
+
+.social_circle li a:hover i,
+.triggeredHover {
+    transform: rotate(360deg);
+    transition: all 0.2s
+}
+
+.social_circle i {
+    color: #fff;
+    transition: all 0.8s;
+    transition: all 0.8s
+}

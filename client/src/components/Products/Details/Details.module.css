@@ -1,0 +1,65 @@
+.detailsBox{
+    margin: 2rem;
+    padding: 2rem;
+    border:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1E3E6;
+    border-radius: 6px;
+} 
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.onePrice {
+    display: flex;
+    gap: 1rem;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+
+.onePrice p {
+    margin-bottom: 0.3rem;
+}
+
+
+.img {
+    max-width: 50%;
+    align-items: center;
+}
+
+.img img {
+    width: 100%;
+    
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin: 1rem 7rem 2rem 0.8rem;
+
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+}
+
+.select p {
+    margin: 0;
+}
+
+.btnItem {
+    display: flex;
+    gap: 1rem;
+}
+
+.btnItem button:hover {
+    color:white;
+    background-color: #c4737c;;
+}
+

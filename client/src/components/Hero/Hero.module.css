@@ -1,0 +1,28 @@
+.row {
+    /* padding: 3em 0; */
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+h1 {
+   text-transform: uppercase;
+}
+
+.col h2 {
+    color: white;
+    text-transform: uppercase;
+    padding-top: 1rem;
+}
+
+.col .button {
+    padding-top: 3rem;
+}
+
+.button>a:hover {
+    background-color: white;
+    color: #E59DA6;;
+}

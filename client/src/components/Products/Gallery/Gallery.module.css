@@ -1,0 +1,41 @@
+
+.lightbox_gallery{
+    /* background-image: linear-gradient(#4A148C, #E53935); */
+    background-repeat: no-repeat;
+    /* color: #000;overflow-x: hidden */
+}
+
+
+
+.lightbox_gallery.row {
+    padding-bottom:20px
+}
+
+.noLoaded  {
+    opacity: 1; 
+    transform: translateX(-100%); 
+    transition: opacity 1s ease transform 1s ease;
+  }
+  
+.loaded   {
+    opacity: 1; 
+    transform: translateX(0);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.controls {
+    background-color: #E59DA6;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    width: 100px;
+    cursor: pointer;
+}
