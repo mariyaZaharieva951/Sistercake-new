@@ -1,13 +1,18 @@
 const mongoose = require('mongoose');
+const { DB_CONNECTION_STRING } = require('./index')
 
-const CONNECTION_STRING = 'mongodb://127.0.0.1:27017/'
 
-module.exports = async (app) => {
-    try {
-        await mongoose.connect(CONNECTION_STRING);
-        console.log('Database connected')
-    } catch(err) {
-        console.error(err.message);
-        process.exit(1);
+module.exports = (app) => {
+    return new Promise((resolve,reject) => {
+        mongoose.connect(DB_CONNECTION_STRING), {
+        useNewUrlParser: true,
+        useUnifieldTopology: true
     }
+        console.log('Database ready');
+        resolve();
+        //})
+    })
+    
+
+    
 }

@@ -1,22 +1,26 @@
 const express = require('express');
-const expressConfig = require('./config/express');
-const databaseConfig = require('./config/database');
+const { PORT }  = require('./config/index');
+const database = require('./config/database');
+const expressConfig = require('./config/express')
 const routesConfig = require('./config/routes');
 
+// const userService = require('./services/user'); //test
+// const authMiddleware = require('./middlewares/auth'); //test
 
 start();
 
 async function start() {
+
     const app = express();
 
-
+    await database(app);
     expressConfig(app);
-    await databaseConfig(app);
     routesConfig(app);
 
-    app.get("/api", (req,res) => {
-        res.json({"users": ["It work"]})
-    })
+    app.get('/', (req,res) => 
+    res.send('It works!'))
 
-    app.listen(5000, () => console.log('Server listening on port 5000'))
+    app.listen(PORT, () => {
+        //testAuth(),
+        console.log(`Application started at http://localhost:${PORT}`)});
 }
