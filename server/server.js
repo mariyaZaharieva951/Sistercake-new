@@ -15,10 +15,10 @@ async function start() {
 
     await database(app);
     expressConfig(app);
-    routesConfig(app);
+    //routesConfig(app);
 
-    app.get('/', (req,res) => 
-    res.send('It works!'))
+    app.use('/', routesConfig);
+    app.use('/Sister', routesConfig);
 
     app.listen(PORT, () => {
         //testAuth(),
