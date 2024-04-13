@@ -15,17 +15,22 @@ const createCake = async (req, res) => {
     }
 };
 
-module.exports = { createCake };
-// const getAllCakes = async (req,res) => {
-//     try {
-//         const allCakes = await Cake.find();
-//         console.log(allCakes);
-//         res.json(allCakes)
-//     } catch(err) {
-//         console.error(err)
-//         res.status(500).json({error: 'Internal server error'})
-//     }
-// }
+const getAllCakes = async (req,res) => {
+    try {
+        const allCakes = await Cake.find();
+        console.log(allCakes);
+        res.json(allCakes)
+    } catch(err) {
+        console.error(err)
+        res.status(500).json({error: 'Internal server error'})
+    }
+}
+
+module.exports = { 
+    createCake,
+    getAllCakes
+};
+
 
 // router.get('/', async (req,res) => {
 //     const allCakes = await Cake.find();
