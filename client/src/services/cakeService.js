@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3030/data';
+const baseUrl = 'http://localhost:3010/Sister';
 
 //Gallery
 
@@ -6,9 +6,9 @@ export const getAll = async () => {
    try{ 
     const response = await fetch(`${baseUrl}/cakes`);
     const result = await response.json();
-    const data = Object.values(result);
+    //const data = Object.values(result);
     
-    return data
+    return result
 } catch(err) {
     console.log(err)
 }

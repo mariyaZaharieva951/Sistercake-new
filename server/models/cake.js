@@ -2,9 +2,9 @@ const { Schema, model} = require('mongoose');
 
 
 const schema = new Schema({
-    price: {type: String}
-    
-    
+    _id: { type: String, require:true},
+    imgUrl: { type: String, required: true }
+
 });
 
 const Cake = model('Cake', schema)

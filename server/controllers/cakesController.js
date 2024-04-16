@@ -5,10 +5,15 @@ const Cake = require('../models/cake');
 
 const createCake = async (req, res) => {
     try {
-        const { price } = req.body;
-        const cake = new Cake({ price });
-        await cake.save();
-        res.status(201).json(cake);
+        const cakesData = req.body.cakes; 
+        const cakes = await Promise.all(Object.keys(cakesData).map(async (key) => {
+            const cakeData = cakesData[key];
+            const cake = new Cake(cakeData);
+            console.log(cakes)
+            return await cake.save(); // Записваме тортата в базата данни
+        }));
+
+        res.status(201).json(cakes);
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: 'Internal server error' });
@@ -18,7 +23,7 @@ const createCake = async (req, res) => {
 const getAllCakes = async (req,res) => {
     try {
         const allCakes = await Cake.find();
-        console.log(allCakes);
+        console.log('all',allCakes);
         res.json(allCakes)
     } catch(err) {
         console.error(err)
