@@ -12,5 +12,6 @@ const cakesController = require('../controllers/cakesController')
 
     router.post('/cakes', cakesController.createCake);
     router.get('/cakes', cakesController.getAllCakes);
+    router.get('/menu', cakesController.getAllBirthdayCakes);
 
 module.exports = router;

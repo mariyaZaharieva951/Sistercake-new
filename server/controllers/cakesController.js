@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const Cake = require('../models/cake');
+const CakeMenu = require('../models/cakeMenu');
 
 const createCake = async (req, res) => {
     try {
@@ -23,8 +24,18 @@ const createCake = async (req, res) => {
 const getAllCakes = async (req,res) => {
     try {
         const allCakes = await Cake.find();
-        console.log('all',allCakes);
         res.json(allCakes)
+    } catch(err) {
+        console.error(err)
+        res.status(500).json({error: 'Internal server error'})
+    }
+}
+
+const getAllBirthdayCakes = async (req,res) => {
+    try {
+        const allBirthdayCakes = await Cake.find();
+        res.json(allBirthdayCakes)
+        console.log(allBirthdayCakes)
     } catch(err) {
         console.error(err)
         res.status(500).json({error: 'Internal server error'})
@@ -33,7 +44,8 @@ const getAllCakes = async (req,res) => {
 
 module.exports = { 
     createCake,
-    getAllCakes
+    getAllCakes,
+    getAllBirthdayCakes
 };
 
 
