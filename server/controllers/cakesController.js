@@ -33,9 +33,42 @@ const getAllCakes = async (req,res) => {
 
 const getAllBirthdayCakes = async (req,res) => {
     try {
-        const allBirthdayCakes = await Cake.find();
+        const allBirthdayCakes = await CakeMenu.find();
         res.json(allBirthdayCakes)
         console.log(allBirthdayCakes)
+    } catch(err) {
+        console.error(err)
+        res.status(500).json({error: 'Internal server error'})
+    }
+}
+
+const getAllWeddingCakes = async (req,res) => {
+    try {
+        const allWeddingCakes = await CakeMenu.find();
+        res.json(getAllWeddingCakes)
+        console.log(allWeddingCakes)
+    } catch(err) {
+        console.error(err)
+        res.status(500).json({error: 'Internal server error'})
+    }
+}
+
+const getAllKidsCakes = async (req,res) => {
+    try {
+        const allKidsCakes = await CakeMenu.find();
+        res.json(allKidsCakes)
+        console.log(allKidsCakes)
+    } catch(err) {
+        console.error(err)
+        res.status(500).json({error: 'Internal server error'})
+    }
+}
+
+const getAllIndividualCakes = async (req,res) => {
+    try {
+        const allIndividualCakes = await CakeMenu.find();
+        res.json(allIndividualCakes)
+        console.log(allIndividualCakes)
     } catch(err) {
         console.error(err)
         res.status(500).json({error: 'Internal server error'})
@@ -45,7 +78,10 @@ const getAllBirthdayCakes = async (req,res) => {
 module.exports = { 
     createCake,
     getAllCakes,
-    getAllBirthdayCakes
+    getAllBirthdayCakes,
+    getAllWeddingCakes,
+    getAllKidsCakes,
+    getAllIndividualCakes
 };
 
 
