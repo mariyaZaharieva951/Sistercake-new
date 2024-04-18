@@ -6,6 +6,7 @@ export const getAll = async () => {
    try{ 
     const response = await fetch(`${baseUrl}/cakes`);
     const result = await response.json();
+    console.log(response)
     //const data = Object.values(result);
     
     return result
@@ -19,9 +20,11 @@ export const getAll = async () => {
 export const getAllBirthdayCake = async () => {
     try{ 
      const response = await fetch(`${baseUrl}/birthdayCakes`);
+     console.log('response',response)
      const result = await response.json();
+     console.log(result)
      const data = Object.values(result);
-     
+     console.log('data',data)
      return data
  } catch(err) {
      console.log(err)

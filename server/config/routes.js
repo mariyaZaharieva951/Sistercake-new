@@ -13,23 +13,18 @@ const cakesController = require('../controllers/cakesController')
     router.post('/cakes', cakesController.createCake);
     router.get('/cakes', cakesController.getAllCakes);
 
-    router.get('/menu', async (req, res) => {
-        try {
-            const birthdayCakes = await cakesController.getAllBirthdayCakes(req, res);
-            const weddingCakes = await cakesController.getAllWeddingCakes(req, res);
-            const kidsCakes = await cakesController.getAllKidsCakes(req, res);
-            const individualCakes = await cakesController.individualCakes(req, res);
+    router.post('/birthdayCakes', cakesController.createBirthdayCake);
+    router.get('/birthdayCakes', cakesController.getAllBirthdayCakes);
+
+    router.post('/weddingCakes', cakesController.createWeddingCake);
+    router.get('/weddingCakes', cakesController.getAllWeddingCakes);
     
-            res.status(200).json({
-                birthdayCakes,
-                weddingCakes,
-                kidsCakes,
-                individualCakes
-            });
-        } catch (error) {
-            console.error(error);
-            res.status(500).json({ error: 'Internal server error' });
-        }
-    });
+    router.post('/kidsCakes', cakesController.createKidsCake);
+    router.get('/kidsCakes', cakesController.getAllKidsCakes);
+
+    router.post('/individualCakes', cakesController.createIndividualCake);
+    router.get('/individualCakes', cakesController.getAllIndividualCakes);
+
+    
 
 module.exports = router;
